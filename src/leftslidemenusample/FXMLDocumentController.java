@@ -64,6 +64,7 @@ public class FXMLDocumentController implements Initializable {
         TranslateTransition closeNav=new TranslateTransition(new Duration(350), navList);
         menu.setOnAction((ActionEvent evt)->{
             if(navList.getTranslateX()!=0){
+                navList.toFront();
                 openNav.play();
             }else{
                 closeNav.setToX(-(navList.getWidth()));
